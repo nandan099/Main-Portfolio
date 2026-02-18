@@ -1,16 +1,75 @@
-# React + Vite
+# Nandan Reddy Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React + Vite, styled with Tailwind CSS, and animated with Framer Motion.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- Vite 8
+- Tailwind CSS 4
+- Framer Motion
+- EmailJS (contact form)
+- Lucide React icons
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive single-page portfolio layout
+- Hero, About, Projects, Contact, and Footer sections
+- Animated UI elements and transitions
+- Contact form integration using EmailJS
+- Reusable UI components (buttons, animated border button)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure environment variables
+
+Create a `.env` file in the project root:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+These are required for the contact form in `src/sections/Contact.jsx`.
+
+### 3. Run development server
+
+```bash
+npm run dev
+```
+
+App runs on the local Vite URL printed in your terminal (typically `http://localhost:5173`).
+
+## Available Scripts
+
+- `npm run dev` - Start local development server
+- `npm run build` - Create production build in `dist/`
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint checks
+
+## Project Structure
+
+```text
+src/
+  components/    Reusable UI components
+  layout/        Navbar and footer
+  sections/      Page sections (Hero, About, Projects, Contact)
+  App.jsx        Main page composition
+```
+
+## Deployment
+
+Build the app before deploying:
+
+```bash
+npm run build
+```
+
+Deploy the generated `dist/` folder to your hosting provider (for example, Vercel or Netlify).
