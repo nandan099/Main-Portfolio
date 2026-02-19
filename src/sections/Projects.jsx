@@ -32,7 +32,6 @@ export const Projects = () => {
       className="py-32 bg-linear-to-b from-background to-muted/20"
     >
       <div className="container mx-auto px-6">
-
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="text-sm uppercase tracking-widest text-primary font-medium">
@@ -50,7 +49,6 @@ export const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-12">
-
           {projects.map((project, idx) => (
             <MotionDiv
               key={idx}
@@ -70,7 +68,6 @@ export const Projects = () => {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-
                   <a
                     href={project.link}
                     className="p-3 rounded-full bg-white text-black hover:scale-110 transition-transform"
@@ -84,13 +81,11 @@ export const Projects = () => {
                   >
                     <Github className="w-5 h-5" />
                   </a>
-
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-8 space-y-5">
-
                 <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
@@ -109,21 +104,21 @@ export const Projects = () => {
                     </span>
                   ))}
                 </div>
-
               </div>
             </MotionDiv>
           ))}
-
         </div>
 
         {/* CTA */}
         <div className="text-center mt-20">
-          <AnimatedBorderButton href="https://github.com/nandan099?tab=repositories" className="flex items-center gap-2">
+          <AnimatedBorderButton
+            href="https://github.com/nandan099?tab=repositories"
+            className="flex items-center gap-2"
+          >
             View All Projects
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
         </div>
-
       </div>
     </section>
   );
