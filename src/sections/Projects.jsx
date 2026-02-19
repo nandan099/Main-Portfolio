@@ -20,8 +20,8 @@ const projects = [
       "Full-stack commerce solution with secure payments, inventory system, and analytics.",
     image: "/projects/project2.png",
     tags: ["Next.js", "Stripe", "PostgreSQL"],
-    link: "https://imdb-clone-c36dlrweq-nandan-reddys-projects-5b1b1350.vercel.app/",
-    github: "",
+    link: "https://blog-website-xi-sable.vercel.app/",
+    github: "https://github.com/nandan099/Blog-Website",
   },
 ];
 
