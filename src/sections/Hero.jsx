@@ -26,6 +26,7 @@ const skills = [
 
 const MotionH1 = motion.h1;
 const MotionImg = motion.img;
+const baseUrl = import.meta.env.BASE_URL;
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-background overflow-hidden">
@@ -131,7 +132,7 @@ export const Hero = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
-                src="/portfoliopic.jpg"
+                src={`${baseUrl}portfoliopic.jpg`}
                 alt="Nandan Reddy"
                 className="relative w-80 md:w-96 rounded-3xl object-cover shadow-2xl border border-border"
               />

@@ -3,23 +3,24 @@ import { motion } from "framer-motion";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const MotionDiv = motion.div;
+const baseUrl = import.meta.env.BASE_URL;
 
 const projects = [
   {
     title: "Movie website",
     description:
       "A dynamic movie database with personalized recommendations, watchlists, and user reviews.",
-    image: "/Projects/project1.png",
+    image: `${baseUrl}Projects/project1.png`,
     tags: ["React", "Tailwind CSS", "TMDB API", "React Router"],
     link: "https://imdb-clone-c36dlrweq-nandan-reddys-projects-5b1b1350.vercel.app/",
     github: "https://github.com/nandan099/IMDB-Clone",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Blog website",
     description:
-      "Full-stack commerce solution with secure payments, inventory system, and analytics.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL"],
+      "A responsive blog platform with user authentication, rich text editing, and dynamic content management.",
+    image: `${baseUrl}Projects/project2.png`,
+    tags: ["React.js", "JavaSCript", "Bootstrap"],
     link: "https://blog-website-xi-sable.vercel.app/",
     github: "https://github.com/nandan099/Blog-Website",
   },
