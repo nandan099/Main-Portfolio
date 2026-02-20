@@ -11,11 +11,14 @@ export const AnimatedBorderButton = ({
   ...props
 }) => {
   const Component = href ? motion.a : motion.button;
-  
+
+
   return (
     <Component
       href={href}
-      download={download}
+      {...(download ? { download: true } : {})}
+      target={href?.startsWith("http") ? "_blank" : undefined}
+      rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       transition={{ type: "spring", stiffness: 300 }}
@@ -30,7 +33,6 @@ export const AnimatedBorderButton = ({
       ${className}`}
       {...props}
     >
-      
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none"
         viewBox="0 0 100 40"
@@ -55,13 +57,10 @@ export const AnimatedBorderButton = ({
         />
       </svg>
 
-
       <div className="absolute inset-0 rounded-full bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {/* Content */}
-      <span className="relative z-10 flex items-center gap-2">
-        {children}
-      </span>
+      <span className="relative z-10 flex items-center gap-2">{children}</span>
     </Component>
   );
 };
