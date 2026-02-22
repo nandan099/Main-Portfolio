@@ -55,6 +55,7 @@ export const AnimatedBorderButton = ({
           whileHover={{ strokeDashoffset: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
         />
+        {/* Additional animated elements can be added here, such as circles or lines for extra flair */}
       </svg>
 
       <div className="absolute inset-0 rounded-full bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
