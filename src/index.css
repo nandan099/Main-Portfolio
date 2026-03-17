@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #ECEFF1;
+  --color-foreground: #0f172a;
+  --color-primary: #191970;
+  --color-primary-foreground: #ffffff;
+  --color-muted: #dde3e8;
+  --color-muted-foreground: #475569;
+  --color-border: #cbd5e1;
+}
+
+html {
+  background-color: #ECEFF1;
+}
+
+body {
+  background-color: #ECEFF1;
+  color: #0f172a;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);

@@ -24,12 +24,13 @@ export const AnimatedBorderButton = ({
       transition={{ type: "spring", stiffness: 300 }}
       className={`relative inline-flex items-center justify-center 
       px-8 py-4 text-lg font-medium rounded-full
-      bg-transparent text-foreground
-      border border-border
+      bg-primary text-primary-foreground
+      border border-primary
       overflow-hidden group
       focus:outline-none focus-visible:ring-2
       focus-visible:ring-primary focus-visible:ring-offset-2
-      transition-colors duration-300
+      shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40
+      transition-all duration-300
       ${className}`}
       {...props}
     >
@@ -58,7 +59,7 @@ export const AnimatedBorderButton = ({
         {/* Additional animated elements can be added here, such as circles or lines for extra flair */}
       </svg>
 
-      <div className="absolute inset-0 rounded-full bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {/* Content */}
       <span className="relative z-10 flex items-center gap-2">{children}</span>

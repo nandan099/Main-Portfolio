@@ -25,9 +25,9 @@ export const Button = ({
     primary:
       "bg-primary text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5",
     secondary:
-      "bg-muted text-foreground hover:bg-muted/80",
+      "bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-0.5",
     ghost:
-      "bg-transparent border border-border hover:border-primary hover:text-primary",
+      "bg-primary text-primary-foreground border border-primary hover:shadow-xl hover:shadow-primary/35 hover:-translate-y-0.5",
   };
 
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
